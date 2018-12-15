@@ -3,9 +3,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# Custom settings
+# ====== Custom settings
+# TwitterとOAuth認証するためのもの
+gem 'omniauth'          #  ベースとなるOAuth
+gem 'omniauth-twitter'  # 上記のgemのTwitterプラグイン
+
+# Twitterクライアントを作る上で便利な、様々な機能を提供する
+# APIキーの管理などを簡易化する
 gem 'twitter'
+
+# Railsで環境変数を簡易的に扱う
 gem 'dotenv-rails'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
