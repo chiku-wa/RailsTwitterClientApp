@@ -15,6 +15,9 @@ gem 'twitter'
 # Railsで環境変数を簡易的に扱う
 gem 'dotenv-rails'
 
+# Bootstrap4
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

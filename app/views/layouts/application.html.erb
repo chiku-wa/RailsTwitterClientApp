@@ -7,21 +7,47 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%# モバイル用に表示するための %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Twitterでログイン', '/auth/twitter' %></li>
-      </ul>
-    </div>
+    <header>
+      <div class="navbar navbar-light bg-info box-shadow">
+       <div class="container d-flex">
+        <%# 一列目 %>
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <div class="navbar navbar-light bg-info box-shadow">
+              <div class="text-white text-left">
+                <h3>
+                  Twitter client
+                </h3>
+              </div>
+              <div class="text-white text-right">
+                <%= link_to 'Twitterでログイン', '/auth/twitter', class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <div class="container">
       <% if flash[:notice] %>
-        <div class="alert alert-success">
+        <div class="alert alert-info">
           <%= flash[:notice] %>
         </div>
       <% end %>
       <%= yield %>
     </div>
+
+    <footer class="p-3 mb-3 bg-light rounded text-center">
+      <p>
+        <a href="https://twitter.com/chikuwa04473892">@chiku-wa</a> created this homepage for study.
+      </p>
+    </footer>
+
   </body>
 </html>
