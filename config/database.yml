@@ -11,9 +11,9 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DATABASE'] %>
-  user: <%= ENV['DATABASE_USER'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: <%= ENV['PSQL_DATABASE'] %>
+  user: <%= ENV['PSQL_USER'] %>
+  password: <%= ENV['PSQL_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
