@@ -33,6 +33,10 @@
     </header>
 
     <div class="container">
+      <%# devise用のメッセージ表示領域 %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
       <% if flash[:notice] %>
         <div class="alert alert-info">
           <%= flash[:notice] %>

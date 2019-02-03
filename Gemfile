@@ -19,7 +19,7 @@ gem 'dotenv-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
-# twitterと認証連携するための認証機能
+# 認証機構用のgem(twitterと認証連携するため)
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
