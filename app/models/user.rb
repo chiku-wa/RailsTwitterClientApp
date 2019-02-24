@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :omniauthable, omniauth_providers: %i[twitter]
   def self.find_or_create_from_auth_hash(auth_hash)
     # Omniauthで取得したデータを各カラムに格納する
     provider = auth_hash[:provider]
